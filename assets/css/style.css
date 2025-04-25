@@ -14,10 +14,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #055d2e;
+    background: url('../images/header-bg.jpg') center/cover no-repeat;
     padding: 0 40px;
     height: 140px;
     position: relative;
+    border-bottom: 3px solid #d40000;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -63,7 +65,7 @@ body {
     background-color: #d40000;
     color: white;
     border: none;
-    padding: 12px 28px;
+    padding: 12px 24px;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
@@ -84,44 +86,49 @@ body {
     margin-left: 15px;
 }
 footer {
-    background-color: #055d2e;
+    background: url('../images/header-bg.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 25px;
     margin-top: auto;
+    border-top: 3px solid #d40000;
+    box-sizing: border-box;
 }
+
 @media (max-width: 760px) {
     .top-bar {
         height: auto;
-        padding: 20px 15px;
-        flex-wrap: wrap;
+        min-height: 80px;
+        padding: 10px 15px;
+        flex-wrap: nowrap;
         gap: 15px;
     }
     
     .logo {
         order: 1;
         height: auto;
+        flex: 1;
     }
     
     .logo-img {
-        height: 90px;
+        height: 150px;
     }
     
     .hamburger {
         display: block;
-        order: 2;
+        order: 3;
         font-size: 2.5rem;
     }
     
     .button-wrapper {
-        order: 3;
-        width: 100%;
-        margin: 20px 0 15px;
+        order: 2;
+        width: auto;
+        margin: 20px 35px 15px;
         text-align: center;
     }
     
     .seja-socio {
-        padding: 12px 30px;
+        padding: 12px 40px;
         font-size: 1.1rem;
     }
     
@@ -148,23 +155,5 @@ footer {
     .nav-links a {
         font-size: 1.2rem;
         padding: 8px 0;
-    }
-}
-@media (max-width: 900px) and (min-width: 761px) {
-    .nav-links {
-        gap: 15px;
-    }
-    
-    .nav-links a {
-        font-size: 1rem;
-    }
-    
-    .logo-img {
-        height: 100px;
-    }
-    
-    .top-bar {
-        height: 120px;
-        padding: 0 30px;
     }
 }
