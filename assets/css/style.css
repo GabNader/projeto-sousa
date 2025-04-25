@@ -154,3 +154,23 @@ footer {
         flex-direction: column;
     }
 }
+.menu-lateral {
+    background: url(../images/side-menu-bg.jpg);
+}
+.nav-links-mobile{
+    color: white;
+}
+.menu-lateral h1 {
+    color: #ffffff;
+}
+.nav-links-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 5px 0;
+}
+
+.nav-links-mobile a:hover {
+    color: #739482;
+}
