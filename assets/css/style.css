@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -85,6 +86,7 @@ body {
     cursor: pointer;
     margin-left: 15px;
 }
+
 footer {
     background: url('../images/header-bg.jpg') center/cover no-repeat;
     color: white;
@@ -97,63 +99,58 @@ footer {
 
 @media (max-width: 760px) {
     .top-bar {
-        height: auto;
-        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 10px 15px;
-        flex-wrap: nowrap;
-        gap: 15px;
+        position: relative;
     }
-    
+
     .logo {
-        order: 1;
-        height: auto;
-        flex: 1;
+        position: absolute;
+        left: 15px;
+        z-index: 2;
+        width: 80px;
     }
-    
-    .logo-img {
-        height: 150px;
+
+    .button-wrapper {
+        width: calc(100% - 80px);
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        left: 25px;
     }
-    
+
+    .seja-socio {
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
     .hamburger {
         display: block;
-        order: 3;
-        font-size: 2.5rem;
+        position: absolute;
+        right: 15px;
+        z-index: 2;
+        margin-left: 0;
     }
-    
-    .button-wrapper {
-        order: 2;
-        width: auto;
-        margin: 20px 35px 15px;
-        text-align: center;
-    }
-    
-    .seja-socio {
-        padding: 12px 40px;
-        font-size: 1.1rem;
-    }
-    
+
     .nav-links {
         display: none;
-        order: 4;
-        position: static;
-        transform: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        flex-direction: column;
         background-color: #044527;
         padding: 20px 0;
         gap: 18px;
+        z-index: 10;
     }
-    
+
     .nav-links.active {
         display: flex;
-    }
-    
-    .nav-links li {
-        text-align: center;
-    }
-    
-    .nav-links a {
-        font-size: 1.2rem;
-        padding: 8px 0;
+        flex-direction: column;
     }
 }
