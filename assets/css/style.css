@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: url('../images/header-bg.jpg') center/cover no-repeat;
-    padding: 0 40px;
+    padding: 0 30px;
     height: 140px;
     position: relative;
     border-bottom: 3px solid #d40000;
@@ -119,7 +119,6 @@ footer {
         text-align: center;
         position: relative;
         z-index: 1;
-        left: 25px;
     }
 
     .seja-socio {
@@ -156,21 +155,112 @@ footer {
 }
 .menu-lateral {
     background: url(../images/side-menu-bg.jpg);
+    padding: 20px;
+    text-align: center;
 }
-.nav-links-mobile{
-    color: white;
+.btn-fechar-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+    margin: 0;
+}
+
+.btn-fechar-menu svg {
+    width: 36px;  /* Tamanho aumentado */
+    height: 36px;
+    transition: transform 0.2s ease;
+    fill: #d40000;
+}
+
+.btn-fechar-menu:hover svg {
+    transform: scale(1.1);
+    opacity: 0.9;
+    fill: #d40000;
 }
 .menu-lateral h1 {
     color: #ffffff;
+    margin: 20px 0;
+    text-align: center; 
 }
+.nav-links-mobile {
+    color: white;
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+    text-align: left;  
+}
+
+.nav-links-mobile li {
+    margin: 15px 0; 
+    text-align: left;
+}
+
 .nav-links-mobile a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
-    padding: 5px 0;
+    padding: 10px 20px; 
+    display: inline-block; 
 }
 
 .nav-links-mobile a:hover {
     color: #739482;
+}
+
+
+.menu-lateral .seja-socio {
+    display: block;
+    background-color: #d40000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto; 
+    max-width: 100%;
+    box-shadow: none;
+}
+.menu-lateral .button-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.redes-sociais {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+    max-width: 330px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redes-sociais li {
+    width: 100%;
+    text-align: center;
+}
+
+.redes-sociais svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociais a:hover svg {
+    transform: scale(1.1);
 }
