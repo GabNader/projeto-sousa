@@ -8,6 +8,7 @@
     <title>Sousa Esporte Clube</title>
 </head>
 <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
     <header>
         <nav class="top-bar">
             <div class="logo">
@@ -16,7 +17,7 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">O Calube</a></li>
+                <li><a href="#">O Clube</a></li>
                 <li><a href="#">Estrutura</a></li>
                 <li><a href="#">Dino Store</a></li>
                 <li><a href="#">Notícias</a></li>
@@ -26,22 +27,287 @@
                 <a href="#" class="seja-socio">Seja Sócio</a>
             </div>
             
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="hamburger" id="hamburger">☰</div>
         </nav>
     </header>
 
     <main>
+        <section class="hero-content">
+            <img class="hero" src="../assets/images/hero.jpg" alt="poster do sousa esporte clube">
+
+        </section>
+
         
     </main>
 
+    <div class="menu-lateral" id="menuLateral">
+        <button class="btn-fechar-menu" id="btnFecharMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                <g fill="#d40000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z"></path></g></g>
+                </svg>
+        </button>
+        <div class="menu-logo">
+            <img class="logo-img" src="../assets/images/escudosousa.png" alt="Logo Sousa Esporte Clube">
+        </div>
+        <h1>MENU</h1>
+        <ul class="nav-links-mobile" id="navLinks-mobile">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">O Clube</a></li>
+            <li><a href="#">Estrutura</a></li>
+            <li><a href="#">Dino Store</a></li>
+            <li><a href="#">Notícias</a></li>
+        </ul>
+        <div class="button-wrapper">
+            <button class="seja-socio">Seja Sócio</button>
+        </div>
+        <h1>Nossas Redes</h1>
+        <ul class="redes-sociais" id="redes-sociais">
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(16,16)">
+                                <path
+                                    d="M7.5,1c-3.58393,0 -6.5,2.91607 -6.5,6.5c0,3.58393 2.91607,6.5 6.5,6.5c3.58393,0 6.5,-2.91607 6.5,-6.5c0,-3.58393 -2.91607,-6.5 -6.5,-6.5zM7.5,2c3.04349,0 5.5,2.45651 5.5,5.5c0,2.76633 -2.03243,5.04102 -4.6875,5.43359v-3.84375h1.55273l0.24414,-1.57617h-1.79687v-0.86328c0,-0.655 0.21317,-1.23633 0.82617,-1.23633h0.98438v-1.37695c-0.173,-0.023 -0.53847,-0.07422 -1.23047,-0.07422c-1.444,0 -2.29102,0.763 -2.29102,2.5v1.04883h-1.48437v1.57813h1.48633v3.83008c-2.61373,-0.4278 -4.60352,-2.68286 -4.60352,-5.41992c0,-3.04349 2.45651,-5.5 5.5,-5.5z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M5.91992,6l14.66211,21.375l-14.35156,16.625h3.17969l12.57617,-14.57812l10,14.57813h12.01367l-15.31836,-22.33008l13.51758,-15.66992h-3.16992l-11.75391,13.61719l-9.3418,-13.61719zM9.7168,8h7.16406l23.32227,34h-7.16406z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM16,12c-1.64501,0 -3,1.35499 -3,3c0,1.64501 1.35499,3 3,3c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3zM16,14c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM14,19c-0.55226,0.00006 -0.99994,0.44774 -1,1v15c0.00006,0.55226 0.44774,0.99994 1,1h4c0.55226,-0.00006 0.99994,-0.44774 1,-1v-15c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM22,19c-0.55226,0.00006 -0.99994,0.44774 -1,1v15c0.00006,0.55226 0.44774,0.99994 1,1h4c0.55226,-0.00006 0.99994,-0.44774 1,-1v-7.5c0,-1.37955 1.12045,-2.5 2.5,-2.5c1.37955,0 2.5,1.12045 2.5,2.5v2.5v5c0.00006,0.55226 0.44774,0.99994 1,1h4c0.55226,-0.00006 0.99994,-0.44774 1,-1v-8.5c0,-4.13039 -3.36961,-7.5 -7.5,-7.5c-1.28647,0 -2.44026,0.41615 -3.5,0.99023c-0.00541,-0.54844 -0.45153,-0.99021 -1,-0.99023zM15,21h2v13h-2zM23,21h2v0.81641c0.00005,0.40093 0.23954,0.76309 0.60845,0.9201c0.36891,0.15701 0.79594,0.07853 1.08491,-0.19939c0.99083,-0.9518 2.32332,-1.53711 3.80664,-1.53711c3.04961,0 5.5,2.45039 5.5,5.5v7.5h-2v-4v-2.5c0,-2.47046 -2.02954,-4.5 -4.5,-4.5c-2.47046,0 -4.5,2.02954 -4.5,4.5v6.5h-2z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M24.40234,9c-6.60156,0 -12.80078,0.5 -16.10156,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.39844,2.39844 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.50391,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.59766,-0.5 16.09766,-1.19922c2.20313,-0.5 4.10156,-2 4.5,-4.30078c0.40234,-2.5 0.90234,-6.09766 1,-10.59766c0,-4.5 -0.5,-8.10156 -1,-10.60156c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.5,-0.5 -9.59766,-1 -16.19531,-1zM24.40234,11c7.19922,0 12.99609,0.59766 15.79688,1.09766c1.5,0.40234 2.69922,1.40234 2.89844,2.70313c0.60156,3.19922 1,6.60156 1,10.10156c-0.09766,4.29688 -0.59766,7.79688 -1,10.29688c-0.29687,1.89844 -2.29687,2.5 -2.89844,2.70313c-3.60156,0.69922 -9.60156,1.19531 -15.60156,1.19531c-6,0 -12.09766,-0.39844 -15.59766,-1.19531c-1.5,-0.40234 -2.69922,-1.40234 -2.89844,-2.70312c-0.80078,-2.80078 -1.10156,-6.5 -1.10156,-10.19922c0,-4.60156 0.40234,-8 0.80078,-10.09766c0.30078,-1.90234 2.39844,-2.50391 2.89844,-2.70312c3.30078,-0.69922 9.40234,-1.19922 15.70313,-1.19922zM19,17v16l14,-8zM21,20.40234l8,4.59766l-8,4.59766z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M9,4c-2.75042,0 -5,2.24958 -5,5v32c0,2.75042 2.24958,5 5,5h32c2.75042,0 5,-2.24958 5,-5v-32c0,-2.75042 -2.24958,-5 -5,-5zM9,6h32c1.67158,0 3,1.32842 3,3v32c0,1.67158 -1.32842,3 -3,3h-32c-1.67158,0 -3,-1.32842 -3,-3v-32c0,-1.67158 1.32842,-3 3,-3zM26.04297,10c-0.5515,0.00005 -0.99887,0.44655 -1,0.99805c0,0 -0.01098,4.87522 -0.02148,9.76172c-0.0053,2.44325 -0.01168,4.88902 -0.01562,6.73047c-0.00394,1.84145 -0.00586,3.0066 -0.00586,3.10352c0,1.81526 -1.64858,3.29883 -3.52734,3.29883c-1.86379,0 -3.35156,-1.48972 -3.35156,-3.35352c0,-1.86379 1.48777,-3.35156 3.35156,-3.35156c0.06314,0 0.1904,0.02075 0.4082,0.04688c0.28415,0.03406 0.56927,-0.05523 0.78323,-0.24529c0.21396,-0.19006 0.33624,-0.46267 0.33591,-0.74885v-4.20117c-0.00005,-0.528 -0.41054,-0.965 -0.9375,-0.99805c-0.15583,-0.0098 -0.35192,-0.0293 -0.58984,-0.0293c-5.24953,0 -9.52734,4.27782 -9.52734,9.52734c0,5.24953 4.27782,9.52734 9.52734,9.52734c5.24938,0 9.52734,-4.27782 9.52734,-9.52734v-9.04883c1.45461,1.16341 3.26752,1.90039 5.26953,1.90039c0.27306,0 0.53277,-0.01618 0.78125,-0.03906c0.51463,-0.04749 0.90832,-0.47927 0.9082,-0.99609v-4.66992c0.0003,-0.52448 -0.40463,-0.9601 -0.92773,-0.99805c-3.14464,-0.22561 -5.65141,-2.67528 -5.97852,-5.79102c-0.05305,-0.50925 -0.48214,-0.89619 -0.99414,-0.89648zM27.04102,12h2.28125c0.72678,3.2987 3.30447,5.8144 6.63672,6.44531v2.86523c-2.13887,-0.10861 -4.01749,-1.1756 -5.12305,-2.85742c-0.24284,-0.36962 -0.69961,-0.53585 -1.12322,-0.40877c-0.4236,0.12708 -0.71344,0.51729 -0.71272,0.95955v11.53516c0,4.16848 -3.35873,7.52734 -7.52734,7.52734c-4.16848,0 -7.52734,-3.35887 -7.52734,-7.52734c0,-4.00052 3.12077,-7.17588 7.05469,-7.43164v2.17578c-2.71358,0.25252 -4.87891,2.47904 -4.87891,5.25586c0,2.94421 2.40735,5.35352 5.35156,5.35352c2.92924,0 5.52734,-2.30609 5.52734,-5.29883c0,0.04892 0.00186,-1.25818 0.00586,-3.09961c0.0039,-1.84143 0.01037,-4.28722 0.01563,-6.73047c0.0094,-4.3869 0.0177,-7.91447 0.01953,-8.76367z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        </ul>
+    </div>
+
     <footer>
+        <h1>Nossas Redes</h1>
+        <ul class="redes-sociais" id="redes-sociais">
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(16,16)">
+                                <path
+                                    d="M7.5,1c-3.58393,0 -6.5,2.91607 -6.5,6.5c0,3.58393 2.91607,6.5 6.5,6.5c3.58393,0 6.5,-2.91607 6.5,-6.5c0,-3.58393 -2.91607,-6.5 -6.5,-6.5zM7.5,2c3.04349,0 5.5,2.45651 5.5,5.5c0,2.76633 -2.03243,5.04102 -4.6875,5.43359v-3.84375h1.55273l0.24414,-1.57617h-1.79687v-0.86328c0,-0.655 0.21317,-1.23633 0.82617,-1.23633h0.98438v-1.37695c-0.173,-0.023 -0.53847,-0.07422 -1.23047,-0.07422c-1.444,0 -2.29102,0.763 -2.29102,2.5v1.04883h-1.48437v1.57813h1.48633v3.83008c-2.61373,-0.4278 -4.60352,-2.68286 -4.60352,-5.41992c0,-3.04349 2.45651,-5.5 5.5,-5.5z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M5.91992,6l14.66211,21.375l-14.35156,16.625h3.17969l12.57617,-14.57812l10,14.57813h12.01367l-15.31836,-22.33008l13.51758,-15.66992h-3.16992l-11.75391,13.61719l-9.3418,-13.61719zM9.7168,8h7.16406l23.32227,34h-7.16406z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM16,12c-1.64501,0 -3,1.35499 -3,3c0,1.64501 1.35499,3 3,3c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3zM16,14c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM14,19c-0.55226,0.00006 -0.99994,0.44774 -1,1v15c0.00006,0.55226 0.44774,0.99994 1,1h4c0.55226,-0.00006 0.99994,-0.44774 1,-1v-15c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM22,19c-0.55226,0.00006 -0.99994,0.44774 -1,1v15c0.00006,0.55226 0.44774,0.99994 1,1h4c0.55226,-0.00006 0.99994,-0.44774 1,-1v-7.5c0,-1.37955 1.12045,-2.5 2.5,-2.5c1.37955,0 2.5,1.12045 2.5,2.5v2.5v5c0.00006,0.55226 0.44774,0.99994 1,1h4c0.55226,-0.00006 0.99994,-0.44774 1,-1v-8.5c0,-4.13039 -3.36961,-7.5 -7.5,-7.5c-1.28647,0 -2.44026,0.41615 -3.5,0.99023c-0.00541,-0.54844 -0.45153,-0.99021 -1,-0.99023zM15,21h2v13h-2zM23,21h2v0.81641c0.00005,0.40093 0.23954,0.76309 0.60845,0.9201c0.36891,0.15701 0.79594,0.07853 1.08491,-0.19939c0.99083,-0.9518 2.32332,-1.53711 3.80664,-1.53711c3.04961,0 5.5,2.45039 5.5,5.5v7.5h-2v-4v-2.5c0,-2.47046 -2.02954,-4.5 -4.5,-4.5c-2.47046,0 -4.5,2.02954 -4.5,4.5v6.5h-2z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M24.40234,9c-6.60156,0 -12.80078,0.5 -16.10156,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.39844,2.39844 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.50391,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.59766,-0.5 16.09766,-1.19922c2.20313,-0.5 4.10156,-2 4.5,-4.30078c0.40234,-2.5 0.90234,-6.09766 1,-10.59766c0,-4.5 -0.5,-8.10156 -1,-10.60156c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.5,-0.5 -9.59766,-1 -16.19531,-1zM24.40234,11c7.19922,0 12.99609,0.59766 15.79688,1.09766c1.5,0.40234 2.69922,1.40234 2.89844,2.70313c0.60156,3.19922 1,6.60156 1,10.10156c-0.09766,4.29688 -0.59766,7.79688 -1,10.29688c-0.29687,1.89844 -2.29687,2.5 -2.89844,2.70313c-3.60156,0.69922 -9.60156,1.19531 -15.60156,1.19531c-6,0 -12.09766,-0.39844 -15.59766,-1.19531c-1.5,-0.40234 -2.69922,-1.40234 -2.89844,-2.70312c-0.80078,-2.80078 -1.10156,-6.5 -1.10156,-10.19922c0,-4.60156 0.40234,-8 0.80078,-10.09766c0.30078,-1.90234 2.39844,-2.50391 2.89844,-2.70312c3.30078,-0.69922 9.40234,-1.19922 15.70313,-1.19922zM19,17v16l14,-8zM21,20.40234l8,4.59766l-8,4.59766z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M9,4c-2.75042,0 -5,2.24958 -5,5v32c0,2.75042 2.24958,5 5,5h32c2.75042,0 5,-2.24958 5,-5v-32c0,-2.75042 -2.24958,-5 -5,-5zM9,6h32c1.67158,0 3,1.32842 3,3v32c0,1.67158 -1.32842,3 -3,3h-32c-1.67158,0 -3,-1.32842 -3,-3v-32c0,-1.67158 1.32842,-3 3,-3zM26.04297,10c-0.5515,0.00005 -0.99887,0.44655 -1,0.99805c0,0 -0.01098,4.87522 -0.02148,9.76172c-0.0053,2.44325 -0.01168,4.88902 -0.01562,6.73047c-0.00394,1.84145 -0.00586,3.0066 -0.00586,3.10352c0,1.81526 -1.64858,3.29883 -3.52734,3.29883c-1.86379,0 -3.35156,-1.48972 -3.35156,-3.35352c0,-1.86379 1.48777,-3.35156 3.35156,-3.35156c0.06314,0 0.1904,0.02075 0.4082,0.04688c0.28415,0.03406 0.56927,-0.05523 0.78323,-0.24529c0.21396,-0.19006 0.33624,-0.46267 0.33591,-0.74885v-4.20117c-0.00005,-0.528 -0.41054,-0.965 -0.9375,-0.99805c-0.15583,-0.0098 -0.35192,-0.0293 -0.58984,-0.0293c-5.24953,0 -9.52734,4.27782 -9.52734,9.52734c0,5.24953 4.27782,9.52734 9.52734,9.52734c5.24938,0 9.52734,-4.27782 9.52734,-9.52734v-9.04883c1.45461,1.16341 3.26752,1.90039 5.26953,1.90039c0.27306,0 0.53277,-0.01618 0.78125,-0.03906c0.51463,-0.04749 0.90832,-0.47927 0.9082,-0.99609v-4.66992c0.0003,-0.52448 -0.40463,-0.9601 -0.92773,-0.99805c-3.14464,-0.22561 -5.65141,-2.67528 -5.97852,-5.79102c-0.05305,-0.50925 -0.48214,-0.89619 -0.99414,-0.89648zM27.04102,12h2.28125c0.72678,3.2987 3.30447,5.8144 6.63672,6.44531v2.86523c-2.13887,-0.10861 -4.01749,-1.1756 -5.12305,-2.85742c-0.24284,-0.36962 -0.69961,-0.53585 -1.12322,-0.40877c-0.4236,0.12708 -0.71344,0.51729 -0.71272,0.95955v11.53516c0,4.16848 -3.35873,7.52734 -7.52734,7.52734c-4.16848,0 -7.52734,-3.35887 -7.52734,-7.52734c0,-4.00052 3.12077,-7.17588 7.05469,-7.43164v2.17578c-2.71358,0.25252 -4.87891,2.47904 -4.87891,5.25586c0,2.94421 2.40735,5.35352 5.35156,5.35352c2.92924,0 5.52734,-2.30609 5.52734,-5.29883c0,0.04892 0.00186,-1.25818 0.00586,-3.09961c0.0039,-1.84143 0.01037,-4.28722 0.01563,-6.73047c0.0094,-4.3869 0.0177,-7.91447 0.01953,-8.76367z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        </ul>
         <p>&copy; 2025 Sousa Esporte Clube - Todos os direitos reservados</p>
     </footer>
 
     <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("active");
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLateral = document.getElementById('menuLateral');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const hamburger = document.getElementById('hamburger');
+            const btnFechar = document.getElementById('btnFecharMenu');
+    
+            hamburger.addEventListener('click', function() {
+                menuLateral.classList.add('ativo');
+                menuOverlay.classList.add('ativo');
+            });
+    
+            btnFechar.addEventListener('click', function() {
+                menuLateral.classList.remove('ativo');
+                menuOverlay.classList.remove('ativo');
+            });
+    
+            menuOverlay.addEventListener('click', function() {
+                menuLateral.classList.remove('ativo');
+                menuOverlay.classList.remove('ativo');
+            });
+    
+            // Close menu when links are clicked
+            document.querySelectorAll('.nav-links-mobile a').forEach(link => {
+                link.addEventListener('click', function() {
+                    menuLateral.classList.remove('ativo');
+                    menuOverlay.classList.remove('ativo');
+                });
+            });
+        });
     </script>
 </body>
 </html>
