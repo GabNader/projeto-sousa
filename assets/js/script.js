@@ -4,12 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const btnFechar = document.getElementById('btnFecharMenu');
 
-    // Função para abrir/fechar o menu
     function toggleMenu() {
         menuLateral.classList.toggle('ativo');
         menuOverlay.classList.toggle('ativo');
-        
-        // Controle do scroll da página
         if (menuLateral.classList.contains('ativo')) {
             document.body.style.overflow = 'hidden';
             menuOverlay.style.display = 'block';
@@ -24,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         }
     }
-
-    // Event listeners
     hamburger.addEventListener('click', function(e) {
         e.stopPropagation();
         toggleMenu();
@@ -34,16 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     btnFechar.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
 
-    // Fechar menu ao clicar nos links
     document.querySelectorAll('.nav-links-mobile a').forEach(link => {
         link.addEventListener('click', toggleMenu);
-    });
-
-    // Debug (pode remover depois que funcionar)
-    console.log('Elementos encontrados:', {
-        menuLateral,
-        menuOverlay,
-        hamburger,
-        btnFechar
     });
 });
