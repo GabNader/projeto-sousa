@@ -10,7 +10,9 @@ Criar um design responsivo;
 
 Simular um projeto real de desenvolvimento web.
 
-Tecnologias Utilizadas
+
+
+Tecnologias Utilizadas:
 
 HTML5;
 
