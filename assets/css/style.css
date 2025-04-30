@@ -11,7 +11,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    color: #333;
+    line-height: 1.6;
 }
+
 .em-construcao{
     display: block;
     margin: auto;
@@ -30,6 +33,96 @@ body {
     margin: auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     
+}
+.marizao-section {
+    color: #333;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.marizao-layout {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.marizao-left-column {
+    flex: 1.2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.marizao-right-column {
+    flex: 0.8;
+    min-width: 280px;
+}
+
+.marizao-title-container {
+    margin-bottom: 30px;
+}
+
+.marizao-texto {
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.marizao-hero-sobre {
+    display: block;
+    max-width: 100%;
+    margin-left: 15px;
+}
+
+.marizao-foto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.marizao-foto-item {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+.marizao-foto-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.marizao-foto-item img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .marizao-layout {
+        flex-direction: column;
+    }
+    
+    .marizao-hero-sobre {
+        margin: 0 auto 20px;
+        max-width: 90%;
+    }
+    
+    .marizao-texto {
+        padding: 0 10px;
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .marizao-foto-container {
+        margin-top: 10px;
+    }
+    
+    .marizao-foto-item {
+        max-width: 100%;
+    }
 }
 @media (max-width: 1000px) {
     .hero {
@@ -464,7 +557,7 @@ footer {
     z-index: 1000;
     overflow-y: auto;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
 }
 .menu-lateral.ativo {
     right: 0;
@@ -485,7 +578,7 @@ footer {
     z-index: 998;
     display: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
 .menu-lateral.ativo ~ .menu-overlay {
     opacity: 1;
