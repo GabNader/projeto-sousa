@@ -19,3 +19,6 @@ HTML5;
 CSS3 (Flexbox, Grid, animações);
 
 JavaScript Vanilla.
+
+
+Atualizações para o futuro: componentizar o site (no momento está tudo hardcoded no html) e criar as páginas que faltam.
